@@ -1,0 +1,34 @@
+{{>header}}
+
+{{#each errors}}
+<div class="row dom">
+  <div class="col-sm-6 mx-auto">
+<div class="alert alert-danger text-center signup">{{this}}</div>
+</div>
+</div>
+{{else}}
+
+{{/each}}
+
+<div class="row">
+  <div class="col-sm-6 mx-auto">
+<div class="card card-body">
+  <h3>Video Idea</h3>
+  <form action="/video-idea/v1/ideas" method="post">
+
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" name="title">
+    </div>
+
+    <div class="form-group">
+      <label for="details">Details</label>
+      <textarea class="form-control" name="details"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit </button>
+  </form>
+</div>
+</div>
+</div>
+
+{{>footer}}

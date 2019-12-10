@@ -1,0 +1,50 @@
+
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/video-idea/v1">Home</a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="/video-idea/v1/ideas">User Ideas</a>
+        </li>
+      </ul>
+
+      
+
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink">Video Ideas</a>
+            <div class="dropdown-menu">
+              <a href="/video-idea/v1/ideas/add-ideas" class="dropdown-item">Add Idea</a>
+              <a href="/video-idea/v1/ideas/my-ideas" class="dropdown-item">My-Ideas</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="/video-idea/v1/logout" class="nav-link">Logout</a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a href="/video-idea/v1/login" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="/video-idea/v1/signup" class="nav-link">Signup</a>
+          </li>
+        {{/if}}
+        <li class="nav-item">
+          <a class="nav-link" href="/video-idea/v1/about">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
