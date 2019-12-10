@@ -107,7 +107,7 @@ const sendTokenResponse = (user,res) =>{
     const options = {
         expires:new Date(Date.now() + process.env.JWT_COOKIE_EXPIRE *24*60*60*1000),
         httpOnly:true,
-        secure = true;
+        secure = true
     };
     
     res.cookie("token",token,options)
